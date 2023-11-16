@@ -14,53 +14,33 @@ import java.lang.annotation.Target;
 }
 
 public class Calculator {
-    /**
-     * Поле для зберігання результату калькуляції.
-     */
+
     private double result;
 
-    /**
-     * Конструктор за замовчуванням, ініціалізує результат нулем.
-     */
+
     public Calculator() {
         this.result = 0;
     }
 
-    /**
-     * Метод для виконання додавання числа до результату.
-     *
-     * @param number Число для додавання.
-     */
+
     @CalculatorOperation("Додавання")
     public void add(double number) {
         result += number;
     }
 
-    /**
-     * Метод для виконання віднімання числа від результату.
-     *
-     * @param number Число для віднімання.
-     */
+
     @CalculatorOperation("Віднімання")
     public void subtract(double number) {
         result -= number;
     }
 
-    /**
-     * Метод для виконання множення результату на число.
-     *
-     * @param number Число для множення.
-     */
+
     @CalculatorOperation("Множення")
     public void multiply(double number) {
         result *= number;
     }
 
-    /**
-     * Метод для виконання ділення результату на число.
-     *
-     * @param number Число для ділення.
-     */
+
     @CalculatorOperation("Ділення")
     public void divide(double number) {
         if (number != 0) {
@@ -70,11 +50,7 @@ public class Calculator {
         }
     }
 
-    /**
-     * Метод для отримання поточного результату.
-     *
-     * @return Поточний результат калькуляції.
-     */
+
     public double getResult() {
         return result;
     }
